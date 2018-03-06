@@ -18,5 +18,7 @@ func main() {
 
 	repos, _, _ := client.Repositories.List(ctx, "", nil)
 
-	fmt.Println(repos)
+  for _, v := range repos {
+    fmt.Println(*v.HTMLURL)
+  }
 }
